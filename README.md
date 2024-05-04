@@ -17,3 +17,15 @@ After running the server with the command "cargo run --bin server" and each clie
 ## 2.2. Modifying port
 
 When the client and server have the same port, the application will run smoothly just like before. However, if, for instance, we only change one port, say the client port, an error will occur on the client because, according to the client, that port doesn't have a connection, and the program will crash when given the command "cargo run --bin client".
+
+## 2.3. Small changes. Add some information to client
+
+![Screenshot 2024-05-04 133945](https://github.com/nabiilahputri13/my-first-repob/assets/124870275/aeeb1589-edf5-4ade-9581-b1f8835db3b0)
+
+![Screenshot 2024-05-04 133926](https://github.com/nabiilahputri13/my-first-repob/assets/124870275/3e402ba1-e5ee-452f-80e7-5bf65d3b2e77)
+
+![Screenshot 2024-05-04 133913](https://github.com/nabiilahputri13/my-first-repob/assets/124870275/d27d6e89-7ce3-46ae-abf6-51dd67dc1795)
+
+![Screenshot 2024-05-04 133901](https://github.com/nabiilahputri13/my-first-repob/assets/124870275/74e5bf78-49b1-4bbd-8c5e-1c401a43a567)
+
+The result in the above photo was achieved by modifying the code in bin/server.rs as follows. These changes were made so that when bcast.tx (which is the sender) sends a message to each of its subscribers, the sender's IP address will also be included in the text through the variable addr.
